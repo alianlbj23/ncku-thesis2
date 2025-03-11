@@ -1,0 +1,58 @@
+\documentclass[a4paper,12pt]{report}
+
+\usepackage{fontspec}
+\usepackage{xeCJK}
+
+% 設定中文字型（Windows: SimSun，macOS/Linux: Noto Sans CJK SC）
+\setmainfont{Times New Roman} % 英文字體
+\setCJKmainfont{標楷體} % Windows
+%\setCJKmainfont{Noto Sans CJK SC} % macOS/Linux
+
+\usepackage{geometry}
+\geometry{top=23mm, bottom=35mm, left=30mm, right=25mm}
+
+% ===== 定義封面 =====
+\newgeometry{top=23mm, bottom=30mm, left=20mm, right=20mm} % 設定封面邊界 [1]
+\begin{titlepage}
+  \centering
+  {\fontsize{36pt}{\baselineskip}\selectfont \textbf{國立成功大學}} \par \vspace{1cm} % 校名 [1] (您可以調整字體大小)
+  {\fontsize{24pt}{\baselineskip}\selectfont \textbf{您的系（所、學位學程）別}} \par \vspace{2cm} % 系（所、學位學程）別 [1] (請替換) (您可以調整字體大小)
+  {\fontsize{48pt}{\baselineskip}\selectfont \textbf{您的論文標題 (中文)}} \par \vspace{0.5cm} % 論文名稱（中文） [1] (請替換) (您可以調整字體大小)
+  {\fontsize{36pt}{\baselineskip}\selectfont Your Thesis Title (English)} \par \vspace{2cm} % 題目英文名稱 [1] (請替換) (您可以調整字體大小)
+  {\fontsize{24pt}{\baselineskip}\selectfont 您的研究生姓名} \par \vspace{0.5cm} % 研究生姓名 [1] (請替換) (您可以調整字體大小)
+  {\fontsize{20pt}{\baselineskip}\selectfont 指導教授姓名} \par \vspace{2cm} % 指導教授姓名 [1] (請替換) (您可以調整字體大小)
+  {\fontsize{20pt}{\baselineskip}\selectfont 年份 月份 (學位考試通過日期)} \par % 年、月(學位考試通過日期) [1] (請替換) (您可以調整字體大小)
+\end{titlepage}
+\restoregeometry % 恢復內頁邊界 [1]
+
+\begin{document}
+
+% ===== 中文摘要 =====
+\chapter*{\centering 中文摘要}
+\begin{center}
+  {\Large \textbf{論文標題 (請替換)}} % 修改你的論文標題
+\end{center}
+\vspace{1cm}
+
+這裡是中文摘要內容，請填入摘要大綱。摘要應概述研究背景、研究目標、研究方法，以及主要結果和結論。
+
+\vspace{1cm}
+
+\noindent \textbf{關鍵字：} 這裡填入關鍵字，最多五個，請用逗號分隔。
+
+\newpage
+
+% ===== 英文摘要 (Extended Abstract) =====
+\chapter*{\centering Extended Abstract}
+\begin{center}
+  {\Large \textbf{Thesis Title (Replace with Your Title)}} % 修改你的英文標題
+\end{center}
+\vspace{1cm}
+
+This is the extended abstract, which should summarize the background, research objectives, methodology, key findings, and conclusions.
+
+\vspace{1cm}
+
+\noindent \textbf{Keywords:} Enter up to five keywords, separated by commas.
+
+\end{document}
