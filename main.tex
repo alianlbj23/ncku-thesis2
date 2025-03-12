@@ -1,8 +1,12 @@
 \documentclass[a4paper,12pt]{report}
 \input{format_setting/fonts.tex}
 \input{format_setting/layout.tex} % 內頁邊界設定
-\input{format_setting/chapter_format.tex}
 
+\usepackage[backend=biber,style=ieee]{biblatex}  % 使用 IEEE 格式
+\addbibresource{references/reference.bib}  % 載入參考文獻資料
+
+\input{format_setting/chapter_format.tex}
+% \input{format_setting/reference_format.tex}
 \begin{document}
 
 % 封面（不編頁碼）
@@ -31,5 +35,9 @@
 
 % ====== 第一章 ======
 \include{main_matter/chapter2_related_work}
+
+% ====== reference ======
+\nocite{*}  % Include all references, even if not cited
+\printbibliography
 
 \end{document}
